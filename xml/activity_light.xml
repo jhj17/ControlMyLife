@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jeffjosephs.controlMyLife.LightActivity">
+
+    <TextView
+        android:text="Light Model:\nMainstays Mini Clip Lamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:id="@+id/lightModel"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light"
+        android:id="@+id/lightSwitch"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/lightModel"
+        android:layout_alignLeft="@+id/lightModel"
+        android:layout_alignStart="@+id/lightModel"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Set Alarm:         "
+        android:id="@+id/setAlarmLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/alarmSetTimeLabel"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:id="@+id/setAlarmButton"
+        android:layout_above="@+id/decrementHourButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/hourTextBox"
+        android:layout_toStartOf="@+id/hourTextBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Light On Alarm Set:         "
+        android:id="@+id/lightAlarmLabel"
+        android:layout_below="@+id/lightSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time:         "
+        android:id="@+id/alarmSetTimeLabel"
+        android:layout_toEndOf="@+id/brewAlarmLabel"
+        android:layout_below="@+id/lightAlarmLabel"
+        android:layout_alignLeft="@+id/lightSwitch"
+        android:layout_alignStart="@+id/lightSwitch"
+        android:layout_marginBottom="25dp"
+        android:layout_toLeftOf="@+id/alarmStatusLabel"
+        android:layout_toStartOf="@+id/alarmStatusLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A      "
+        android:id="@+id/alarmStatusLabel"
+        android:layout_toEndOf="@+id/lightAlarmLabel"
+        android:layout_alignTop="@+id/lightAlarmLabel"
+        android:layout_alignRight="@+id/lightModel"
+        android:layout_alignEnd="@+id/lightModel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hourTextBox"
+        android:layout_toStartOf="@+id/minuteTextBox"
+        android:enabled="false"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:singleLine="true"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        android:digits="2"
+        android:layout_below="@+id/incrementHourButton"
+        android:layout_alignLeft="@+id/incrementHourButton"
+        android:layout_alignStart="@+id/decrementHourButton"
+        android:layout_marginRight="13dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/minuteTextBox"
+        android:layout_toStartOf="@+id/lightAlarmOffButton"
+        android:layout_alignTop="@+id/hourTextBox"
+        android:enabled="false"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:digits="2"
+        android:layout_toEndOf="@+id/lightAlarmLabel"
+        android:layout_toLeftOf="@+id/lightAlarmOffButton"
+        android:layout_toRightOf="@+id/lightAlarmLabel"
+        android:layout_marginLeft="-12dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/incrementHourButton"
+        android:layout_toStartOf="@+id/minuteTextBox"
+        android:padding="1dp"
+        android:layout_toEndOf="@+id/setAlarmLabel"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/setAlarmLabel"
+        android:layout_toLeftOf="@+id/minuteTextBox"
+        android:paddingLeft="15dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginLeft="-20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/incrementMinButton"
+        android:layout_toStartOf="@+id/lightAlarmOffButton"
+        android:layout_toEndOf="@+id/hourTextBox"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/incrementHourButton"
+        android:padding="1dp"
+        android:layout_alignBottom="@+id/incrementHourButton"
+        android:layout_toLeftOf="@+id/lightAlarmOffButton"
+        android:layout_alignLeft="@+id/minuteTextBox"
+        android:layout_alignStart="@+id/minuteTextBox" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementHourButton"
+        android:layout_toStartOf="@+id/minuteTextBox"
+        android:layout_below="@+id/hourTextBox"
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="1dp"
+        android:layout_alignLeft="@+id/incrementHourButton"
+        android:layout_alignStart="@+id/incrementHourButton"
+        android:layout_marginRight="13dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementMinButton"
+        android:layout_toStartOf="@+id/minuteTextBox"
+        android:layout_below="@+id/minuteTextBox"
+        android:layout_alignLeft="@+id/minuteTextBox"
+        android:layout_alignStart="@+id/minuteTextBox"
+        android:layout_alignRight="@+id/minuteTextBox"
+        android:layout_alignEnd="@+id/minuteTextBox"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="1dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Off"
+        android:id="@+id/lightAlarmOffButton"
+        android:layout_alignBottom="@+id/alarmSetTimeLabel"
+        android:layout_toRightOf="@+id/alarmStatusLabel"
+        android:layout_toEndOf="@+id/alarmStatusLabel" />
+
+</RelativeLayout>
