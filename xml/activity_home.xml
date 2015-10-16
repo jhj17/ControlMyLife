@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jeffjosephs.controlMyLife.HomeActivity">
+
+
+    <TextView
+        android:text="Welcome to Control My Life!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerText"
+        android:textStyle="normal"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Devices:"
+        android:id="@+id/devicesLabel"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/headerText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Coffee Makers:"
+        android:id="@+id/coffeeMakerLabel"
+        android:layout_below="@+id/devicesLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Fans:"
+        android:id="@+id/fanLabel"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/coffeeMakerLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="- Black and Decker DCM600B \n  5-Cup Coffeemaker"
+        android:id="@+id/coffeeMaker1"
+        android:layout_toEndOf="@+id/fanLabel"
+        android:layout_below="@+id/coffeeMakerLabel"
+        android:layout_toRightOf="@+id/fanLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="- Lasko 2002W Personal Fan"
+        android:id="@+id/fan1"
+        android:layout_below="@+id/fanLabel"
+        android:layout_toRightOf="@+id/fanLabel"
+        android:layout_toEndOf="@+id/fanLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lights:"
+        android:id="@+id/lightLabel"
+        android:layout_below="@+id/fan1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="- Mainstays Mini Clip Lamp"
+        android:id="@+id/light1"
+        android:layout_below="@+id/lightLabel"
+        android:layout_alignLeft="@+id/fan1"
+        android:layout_alignStart="@+id/fan1"
+        android:layout_marginBottom="40dp" />
+
+</RelativeLayout>
