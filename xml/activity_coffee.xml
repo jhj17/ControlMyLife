@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jeffjosephs.jeff.myfirstapp.CoffeeActivity">
+
+    <TextView
+        android:text="Coffeemaker Model:\nBlack and Decker DCM600B \n5-Cup Coffeemaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:id="@+id/coffeeMakerLabel"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Brew Alarm Set:         "
+        android:id="@+id/brewAlarmLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/coffeeMakerLabel"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time:         "
+        android:id="@+id/alarmTimeLabel"
+        android:layout_toEndOf="@+id/brewAlarmLabel"
+        android:layout_below="@+id/brewAlarmLabel"
+        android:layout_alignLeft="@+id/coffeeMakerLabel"
+        android:layout_alignStart="@+id/coffeeMakerLabel"
+        android:layout_alignRight="@+id/brewAlarmLabel"
+        android:layout_alignEnd="@+id/brewAlarmLabel"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="N/A      "
+        android:id="@+id/alarmStatus"
+        android:layout_toEndOf="@+id/alarmTimeLabel"
+        android:layout_above="@+id/alarmTimeLabel"
+        android:layout_toRightOf="@+id/alarmTimeLabel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brew Coffee"
+        android:id="@+id/brewButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Set Alarm:         "
+        android:id="@+id/alarmSetLabel"
+        android:layout_below="@+id/alarmTimeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Off"
+        android:id="@+id/alarmOffButton"
+        android:layout_toEndOf="@+id/coffeeMakerLabel"
+        android:enabled="true"
+        android:layout_alignBottom="@+id/alarmTimeLabel"
+        android:layout_alignRight="@+id/brewButton"
+        android:layout_alignEnd="@+id/brewButton"
+        android:layout_toRightOf="@+id/coffeeMakerLabel"
+        android:layout_marginLeft="-10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/incrementBrewAlarmHButton"
+        android:layout_toStartOf="@+id/incrementBrewAlarmMButton"
+        android:padding="1dp"
+        android:layout_toEndOf="@+id/setAlarmLabel"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/alarmSetLabel"
+        android:layout_toLeftOf="@+id/incrementBrewAlarmMButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/incrementBrewAlarmMButton"
+        android:layout_toStartOf="@+id/minuteTextBox"
+        android:layout_toEndOf="@+id/alarmTimeLabel"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="1dp"
+        android:layout_above="@+id/brewAlarmHTextBox"
+        android:layout_alignLeft="@+id/alarmStatus"
+        android:layout_alignStart="@+id/alarmStatus" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/brewAlarmHTextBox"
+        android:layout_toStartOf="@+id/incrementBrewAlarmMButton"
+        android:enabled="false"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:singleLine="true"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        android:digits="2"
+        android:layout_below="@+id/incrementBrewAlarmHButton"
+        android:layout_alignLeft="@+id/incrementBrewAlarmHButton"
+        android:layout_alignStart="@+id/incrementBrewAlarmHButton"
+        android:layout_toLeftOf="@+id/incrementBrewAlarmMButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/brewAlarmMTextBox"
+        android:layout_toEndOf="@+id/alarmSetTimeLabel"
+        android:layout_toStartOf="@+id/alarmStatusLabel"
+        android:enabled="false"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:digits="2"
+        android:layout_below="@+id/incrementBrewAlarmMButton"
+        android:layout_alignLeft="@+id/incrementBrewAlarmMButton"
+        android:layout_alignStart="@+id/incrementBrewAlarmMButton"
+        android:layout_alignRight="@+id/incrementBrewAlarmMButton"
+        android:layout_alignEnd="@+id/incrementBrewAlarmMButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementBrewAlarmHButton"
+        android:layout_toStartOf="@+id/brewAlarmMTextBox"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="1dp"
+        android:layout_below="@+id/brewAlarmHTextBox"
+        android:layout_alignLeft="@+id/brewAlarmHTextBox"
+        android:layout_alignStart="@+id/brewAlarmHTextBox"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementBrewAlarmMButton"
+        android:layout_toStartOf="@+id/brewAlarmMTextBox"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="1dp"
+        android:layout_below="@+id/brewAlarmMTextBox"
+        android:layout_alignLeft="@+id/brewAlarmMTextBox"
+        android:layout_alignStart="@+id/brewAlarmMTextBox"
+        android:layout_alignRight="@+id/brewAlarmMTextBox"
+        android:layout_alignEnd="@+id/brewAlarmMTextBox"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:id="@+id/setBrewAlarmButton"
+        android:layout_toStartOf="@+id/incrementBrewAlarmHButton"
+        android:layout_above="@+id/decrementBrewAlarmHButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
